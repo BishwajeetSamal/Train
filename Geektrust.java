@@ -66,11 +66,11 @@ public class Geektrust {
         HashMap<String,Integer> trainAB = new HashMap<>();
         ArrayList<Integer> getTrainDistList = new ArrayList<>();
         for(String station : train1_stationList){
-            if(train1.containsKey(station)){
+            if(train1.containsKey(station) && !station.equals("HYB")){
                 Integer val = train1.get(station)-train1.get("HYB");
                 trainAB.put(station,val);
                 getTrainDistList.add(val);
-            }else if(train2.containsKey(station)) {
+            }else if(train2.containsKey(station) && !station.equals("HYB")) {
                 Integer val = train2.get(station)-train2.get("HYB");
                 trainAB.put(station,val);
                 getTrainDistList.add(val);
@@ -78,11 +78,11 @@ public class Geektrust {
         }
 
         for(String station : train2_stationList){
-            if(train2.containsKey(station)){
+            if(train2.containsKey(station) && !station.equals("HYB")){
                 Integer val = train2.get(station)-train2.get("HYB");
                 trainAB.put(station,val);
                 getTrainDistList.add(val);
-            }else if(train1.containsKey(station)) {
+            }else if(train1.containsKey(station) && !station.equals("HYB")) {
                 Integer val = train1.get(station)-train1.get("HYB");
                 trainAB.put(station,val);
                 getTrainDistList.add(val);
@@ -108,7 +108,6 @@ public class Geektrust {
         finalTrainABList.add(1,"TRAIN_AB");
         finalTrainABList.add(2,"ENGINE");
         finalTrainABList.add(3,"ENGINE");
-        finalTrainABList.remove("HYB");
         train1_stationList.add(0,"ARRIVAL");
         train2_stationList.add(0,"ARRIVAL");
         String finalTrain_A_list = String.join(" ", train1_stationList);
