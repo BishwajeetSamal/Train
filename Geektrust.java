@@ -37,7 +37,7 @@ public class Geektrust {
             train2.put("NJP",4200);
             train2.put("GHY",4700);
 
-            File file = new File("test.txt"); 
+            File file = new File(args[0]); 
         Scanner sc = new Scanner(file);
         //fetching the first Line
         String train1_input = sc.nextLine();
