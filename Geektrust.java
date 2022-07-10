@@ -37,7 +37,7 @@ public class Geektrust {
             train2.put("NJP",4200);
             train2.put("GHY",4700);
 
-            File file = new File("plainFile.txt"); 
+            File file = new File("text.txt"); 
         Scanner sc = new Scanner(file);
         //fetching the first Line
         String train1_input = sc.nextLine();
@@ -104,9 +104,13 @@ public class Geektrust {
               }
               finalTrainABList.add(stationName);
         }
-        finalTrainABList.add(0,"TRAIN_AB");
-        finalTrainABList.add(1,"ENGINE");
+        finalTrainABList.add(0,"DEPARTURE");
+        finalTrainABList.add(1,"TRAIN_AB");
         finalTrainABList.add(2,"ENGINE");
+        finalTrainABList.add(3,"ENGINE");
+        finalTrainABList.remove("HYB");
+        train1_stationList.add(0,"ARRIVAL");
+        train2_stationList.add(0,"ARRIVAL");
         String finalTrain_A_list = String.join(" ", train1_stationList);
         String finalTrain_B_list = String.join(" ", train2_stationList);
         String finalTrain_AB_list = String.join(" ", finalTrainABList);
