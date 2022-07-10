@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-public class TrainSolution {
+public class Geektrust {
     public static void main(String []args) throws FileNotFoundException,NoSuchElementException,CloneNotSupportedException{
         try {
             HashMap<String,Integer> train1 = new HashMap<>();
@@ -116,7 +116,7 @@ public class TrainSolution {
         } catch (NoSuchElementException e) {
             System.out.println("No lines found below");
         }catch(Exception e){
-            
+
             e.printStackTrace();
         }
     }
